@@ -6,11 +6,15 @@ n = len(my_array)
 for i in range(1,n):
     #setting the insertion index to the increment i
     insert_index = i
-    
+   #setting the current value to an incrementing value of the array 
     current_value = my_array[i]
+#setting the range of the second loop
     for j in range(i-1, -1, -1):
+        #we check whether the array looped through the second index is greater than the current value 
         if my_array[j] > current_value:
+            #we move to the next index and equate the value to the previous value
             my_array[j+1] = my_array[j]
+            #we set the insert_index to the current value
             insert_index = j
         else:
             break
